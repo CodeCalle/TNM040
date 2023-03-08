@@ -5,7 +5,8 @@ import countries from 'world-countries'
 function App () {
   return (
     <div className='App'>
-      <CountryInfo country={countries[0]} />
+      {/* <CountryInfo country={countries[0]} /> */}
+      <CountryInfo country={countries} />
     </div>
   )
 }
