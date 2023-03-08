@@ -1,20 +1,20 @@
 const CountryInfo = ({ country }) => {
   country.sort((a, b) => parseFloat(b.area) - parseFloat(a.area))
 
-  const firstFifteen = country.slice(0, 15)
+  // const filteredCountry = country.filter((item) => item.name.common !== 'Antarctica')
+  // const firstFifteen = filteredCountry.slice(0, 15)
 
-  console.log(firstFifteen)
-
-  // console.log(country.slice(0, 15))
+  const filteredFifteen = country.filter((item) => item.name.common !== 'Antarctica').slice(0, 15)
 
   return (
     // style={{ backgroundColor: 'blue' }}
     <div className='country'>
-      {/* <p><b>{country.name.common}</b> {country.area} km<sup>2</sup></p> */}
-      {/* <p><b>{country[10].name.common}</b> {country[10].area} km<sup>2</sup></p> */}
-      {/* <p>{country}</p> */}
-      {/* sort(country.area) */}
-      {/* <p><b>{country}</b></p> */}
+
+      {filteredFifteen.map(item => {
+        return (
+          <p key={item.cca3}><b>{item.name.common}</b> {item.area} km<sup>2</sup></p>
+        )
+      })}
     </div>
   )
 }
