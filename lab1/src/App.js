@@ -1,5 +1,5 @@
 import './App.css'
-import CountryInfo from './CountryInfo'
+import CountryInfo from './components/CountryInfo'
 import countries from 'world-countries'
 
 function App () {
@@ -9,9 +9,9 @@ function App () {
   return (
     <div className='App'>
       <div className='country'>
-        {filteredFifteen.map(item => {
+        {filteredFifteen.map((item, index) => {
           return (
-            <CountryInfo country={item} key={item.id} largestCountryByArea={filteredFifteen[0].area} />
+            <CountryInfo country={item} key={item.id} detailed={index < 5} largestCountryByArea={filteredFifteen[0].area} />
           )
         })}
       </div>
