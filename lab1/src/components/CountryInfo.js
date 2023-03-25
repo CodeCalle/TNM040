@@ -1,7 +1,7 @@
 const CountryInfo = ({ country, detailed, largestCountryByArea }) => {
   return (
-    <div key={country.cca3}>
-      <p><b>{country.name.common}</b> {country.area} km<sup>2</sup></p>
+    <div className='box' key={country.cca3}>
+      <p><b>{country.name.common}</b> {Math.round(country.area / 100000) / 10} milion km<sup>2</sup></p>
       {detailed === true && (
         <>
           <p>Capital: {country.capital}</p>
