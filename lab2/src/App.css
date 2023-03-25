@@ -1,0 +1,83 @@
+.App {
+  text-align: left;
+  /* display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  width: 33%; */
+  /* width: 100%; */
+}
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+/* .App-link {
+  color: #61dafb;
+} */
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.country {
+  display: flex;
+  flex: 1 1;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+  /* height: 900px; */
+  /* gap: 10px; */
+  /* row-gap: 20px; */
+  /* max-width: 75%; */
+  /* margin: auto; */
+  /* justify-content: left; */
+  /* width: 75%; */
+  /* width: 900px; */
+}
+
+.box {
+  background-color: #F0F0F0;
+  /* flex-grow: 1;
+  min-width: 400px;
+  max-width: 400px;
+  flex-basis: auto;
+  padding: 10px; */
+}
+
+.box:nth-child(2n) {
+  background-color: #FAFAFA;
+}
+
+
+
+/* ### For phones ### */
+@media screen and (max-device-width: 1170px) and (orientation: portrait) {
+  .country {
+    width: 95%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    margin: auto;
+    justify-content: left;
+  }
+  
+  .box {
+    background-color: green;
+    /* min-width: auto; */
+    /* max-width: 40%; */
+  }
+}
