@@ -3,6 +3,7 @@ import './App.css'
 import CountryInfo from './components/CountryInfo'
 import countries from 'world-countries'
 import TextInput from './components/Input'
+import MatchSearch from './components/MatchSearch'
 // import Button from './components/Button'
 
 function App () {
@@ -19,15 +20,15 @@ function App () {
   //   setNumber(number - 1)
   // }
 
-  const matchSearch = word => {
-    const lowerCaseWord = word.toLowerCase()
-    const lowerCaseSearchString = searchString.toLowerCase()
+  // const matchSearch = word => {
+  //   const lowerCaseWord = word.toLowerCase()
+  //   const lowerCaseSearchString = searchString.toLowerCase()
 
-    return lowerCaseWord.indexOf(lowerCaseSearchString) === 0
-  }
+  //   return lowerCaseWord.indexOf(lowerCaseSearchString) === 0
+  // }
 
   // const filteredWords = countries.filter(matchSearch)
-  const filteredWords = countries.filter((country) => matchSearch(country.name.common))
+  const filteredWords = countries.filter((country) => MatchSearch(country.name.common, searchString))
   console.log(filteredWords)
   console.log(filteredFifteen.area)
 
