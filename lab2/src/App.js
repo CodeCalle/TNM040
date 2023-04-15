@@ -20,17 +20,9 @@ function App () {
   //   setNumber(number - 1)
   // }
 
-  // const matchSearch = word => {
-  //   const lowerCaseWord = word.toLowerCase()
-  //   const lowerCaseSearchString = searchString.toLowerCase()
-
-  //   return lowerCaseWord.indexOf(lowerCaseSearchString) === 0
-  // }
-
-  // const filteredWords = countries.filter(matchSearch)
   const filteredWords = countries.filter((country) => MatchSearch(country.name.common, searchString))
   console.log(filteredWords)
-  console.log(filteredFifteen.area)
+  const limitedWords = filteredWords.slice(0, 5)
 
   return (
     <div className='App'>
@@ -43,14 +35,20 @@ function App () {
         <h1>Search for a country</h1>
         <TextInput onChange={setSearchString} value={searchString} />
         <p>Text from searchbar: {searchString}</p>
-        {/* {console.log(searchString)} */}
 
-        <h1>This is the 15 biggest countries on Earth!</h1>
-        {filteredFifteen.map((item, index) => {
+        <h1>Search results</h1>
+        {limitedWords.map((item, index) => {
           return (
             <CountryInfo country={item} key={item.id} detailed={index < 5} largestCountryByArea={filteredFifteen[0].area} />
           )
         })}
+
+        {/* <h1>This is the 15 biggest countries on Earth!</h1>
+        {filteredFifteen.map((item, index) => {
+          return (
+            <CountryInfo country={item} key={item.id} detailed={index < 5} largestCountryByArea={filteredFifteen[0].area} />
+          )
+        })} */}
       </div>
     </div>
   )
