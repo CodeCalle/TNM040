@@ -10,7 +10,7 @@ function App () {
       <Routes>
         <Route path='/' element={<CountryList />} />
         {/* <Route index element={<Home />} /> */}
-        <Route path='/country' element={<CountryDetails />} />
+        <Route path='/country/:cca3' element={<CountryDetails />} />
         <Route path='*' element={<NoPage />} />
       </Routes>
     </BrowserRouter>

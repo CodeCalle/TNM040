@@ -23,7 +23,7 @@ function CountryList () {
         <h1>Search results</h1>
         {filteredWords.map((item, index) => {
           return (
-            <CountryInfo country={item} key={item.id} detailed={index < 5} largestCountryByArea={filteredFifteen[0].area} />
+            <CountryInfo country={item} key={item.cca3} detailed={index < 5} largestCountryByArea={filteredFifteen[0].area} />
           )
         })}
       </div>

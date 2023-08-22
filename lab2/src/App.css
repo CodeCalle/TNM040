@@ -49,6 +49,7 @@
 
 .box {
   background-color: #F0F0F0;
+  cursor: pointer;
   /* flex-grow: 1;
   min-width: 400px;
   max-width: 400px;
